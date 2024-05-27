@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Materiel PC</a>
+        <a class="navbar-brand" href="#">PCBuilderHub</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,7 +25,7 @@
 
         ?>
         <a class="btn float-end" href="../"><i
-                    class="fa-solid fa-screwdriver-wrench"></i> Backoffice</a>
+                    class="fa-solid fa-screwdriver-wrench"></i> Retour</a>
         <a class="btn float-end" href="panier.php"><i class="fa-solid fa-cart-shopping"></i> Panier
             (<?php echo $productCount; ?>)</a>
     </div>

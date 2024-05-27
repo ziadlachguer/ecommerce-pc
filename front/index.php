@@ -7,6 +7,7 @@ session_start();
     <?php include '../include/head_front.php' ?>
     <title>Accueil</title>
 </head>
+
 <body>
 <?php include '../include/nav_front.php' ?>
 <div class="container py-2">

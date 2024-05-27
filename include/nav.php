@@ -6,62 +6,67 @@ if (isset($_SESSION['utilisateur'])) {
 }
 
 ?>
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Materiel PC</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+
+
+<nav class="navbar"  role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="#">PCBuilderHub</a>
+        
         <?php
         $currentPage = $_SERVER['PHP_SELF'];
         ?>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link <?php if ($currentPage == '/ecommerce/index.php') echo 'active' ?>"
-                       aria-current="page" href="index.php"><i class="fa-solid fa-home"></i> Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link <?php if ($currentPage == '/ecommerce/ajouter_utilisateur.php') echo 'active' ?>"
-                       aria-current="page" href="ajouter_utilisateur.php"><i class="fa-solid fa-user-plus"></i>
+        <div id="navbarBasicExample " class="navbar-menu">
+            <div class="navbar-start">
+                
+                    <a class="navbar-item <?php if ($currentPage == '/ecommerce/index.php') echo 'active' ?>" aria-current="page" href="index.php"><i class="fa-solid fa-home"></i> Accueil</a>
+                
+                
+                    <a class="navbar-item <?php if ($currentPage == '/ecommerce/ajouter_utilisateur.php') echo 'active' ?>" aria-current="page" href="ajouter_utilisateur.php"><i class="fa-solid fa-user-plus"></i>
                         Ajouter utilisateur</a>
-                </li>
+                
                 <?php
                 if ($connecte) {
-                    ?>
-                    <li class="nav-item">
-                        <a class="nav-link <?php if ($currentPage == '/ecommerce/categories.php') echo 'active' ?>"
-                           aria-current="page" href="categories.php"><i
-                                    class="fa-brands fa-dropbox"></i> Liste des catégories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?php if ($currentPage == '/ecommerce/produits.php') echo 'active' ?>"
-                           aria-current="page" href="produits.php"><i class="fa-solid fa-tag"></i>
+                ?>
+                    
+                        <a class="navbar-item <?php if ($currentPage == '/ecommerce/categories.php') echo 'active' ?>" aria-current="page" href="categories.php"><i class="fa-brands fa-dropbox"></i> Liste des catégories</a>
+                    
+                    
+                        <a class="navbar-item <?php if ($currentPage == '/ecommerce/produits.php') echo 'active' ?>" aria-current="page" href="produits.php"><i class="fa-solid fa-tag"></i>
                             Liste des produits</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?php if ($currentPage == '/ecommerce/commandes.php') echo 'active' ?>"
-                           aria-current="page" href="commandes.php"><i
-                                    class="fa-solid fa-barcode"></i> Commandes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="deconnexion.php"><i
-                                    class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
-                    </li>
+                    
+                    
+                        <a class="navbar-item <?php if ($currentPage == '/ecommerce/commandes.php') echo 'active' ?>" aria-current="page" href="commandes.php"><i class="fa-solid fa-barcode"></i> Commandes</a>
+                    </div>  
+                </div>
+            </div>   
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                    <button class="bd-cycle" data-target="js-themes" id="themeButton">
+                    
+                    <span class="icon has-text-warning">
+                        <i id="ii" class="fas fa-lg fa-sun"></i>
+                    </span>
+                    </button>
+                        <a class="button has-background-danger-55" aria-current="page" href="deconnexion.php"><i class="fa-solid fa-right-from-bracket"></i><strong>Deconnexion</strong>
+                    </a>
+                    
 
-                    <?php
+                <?php
                 } else {
-                    ?>
-                    <li class="nav-item">
-                        <a class="nav-link <?php if ($currentPage == '/ecommerce/connexion.php') echo 'active' ?>"
-                           href="connexion.php"><i class="fa-solid fa-arrow-right-to-bracket"></i> Connexion</a>
-                    </li>
-                    <?php
+                ?>
+                    
+                        <a class="navbar-item <?php if ($currentPage == '/ecommerce/connexion.php') echo 'active' ?>" href="connexion.php"><i class="fa-solid fa-arrow-right-to-bracket"></i> Connexion</a>
+                    
+                <?php
                 }
                 ?>
-            </ul>
-        </div>
-        <a class="btn float-end" href="front/"><i class="fa-solid fa-cart-shopping"></i> Site front</a>
-    </div>
+                    </div>
+                </div>  
+                    <!-- <a class="button has-background-danger" href="front/"><i class="fa-solid fa-cart-shopping"></i><strong>Site front</strong></a> -->
+            </div>
+        
+    
+          
 </nav>
+  

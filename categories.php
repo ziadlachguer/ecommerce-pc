@@ -4,11 +4,20 @@
     <?php include 'include/head.php' ?>
     <title>Liste des catégories</title>
 </head>
+<style>
+    .hero.is-landing {
+            color: #ffffff;
+            background-image: linear-gradient( 135deg, rgba(60, 8, 118, 0.8) 0%, rgba(250, 0, 118, 0.8) 100%);
+            
+        }
+        
+
+</style>
 <body>
 <?php include 'include/nav.php' ?>
-<div class="container py-2">
+<div class="container py-2 has-background-light">
     <h2>Liste des catégories</h2>
-    <a href="ajouter_categorie.php" class="btn btn-primary">Ajouter catégorie</a>
+    <a href="ajouter_categorie.php" class="button is-link is-hovered">Ajouter catégorie</a>
     <table class="table table-striped table-hover">
         <thead>
             <tr>
@@ -35,8 +44,8 @@
                 </td>
                 <td><?php echo $categorie['date_creation'] ?></td>
                 <td>
-                    <a href="modifier_categorie.php?id=<?php echo $categorie['id'] ?>" class="btn btn-primary">Modifier</a>
-                    <a href="supprimer_categorie.php?id=<?php echo $categorie['id'] ?>" onclick="return confirm('Voulez vous vraiment supprimer la catégorie <?php echo $categorie['libelle'] ?>');" class="btn btn-danger">Supprimer</a>
+                    <a href="modifier_categorie.php?id=<?php echo $categorie['id'] ?>" class="button is-link is-hovered">Modifier</a>
+                    <a href="supprimer_categorie.php?id=<?php echo $categorie['id'] ?>" onclick="return confirm('Voulez vous vraiment supprimer la catégorie <?php echo $categorie['libelle'] ?>');" class="button is-danger is-hovered">Supprimer</a>
                 </td>
             </tr>
             <?php

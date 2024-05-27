@@ -4,12 +4,22 @@
     <?php include 'include/head.php' ?>
     <title>Liste des produits</title>
 </head>
+<style>
+    .hero.is-landing {
+            color: #ffffff;
+            background-image: linear-gradient( 135deg, rgba(60, 8, 118, 0.8) 0%, rgba(250, 0, 118, 0.8) 100%);
+        }
+        
+
+</style>
 <body>
 <?php include 'include/nav.php' ?>
 <div class="container py-2">
     <h2>Liste des produits</h2>
-    <a href="ajouter_produit.php" class="btn btn-primary">Ajouter produit</a>
+    <a href="ajouter_produit.php" class="button is-link is-rounded">Ajouter produit</a>
+    
     <table class="table table-striped table-hover">
+        
         <thead>
             <tr>
                 <th>#ID</th>
@@ -40,14 +50,15 @@
                 <td><?= $produit->date_creation ?></td>
                 <td><img class="img-fluid" width="90" src="upload/produit/<?= $produit->image ?>" alt="<?= $produit->libelle ?>"></td>
                 <td>
-                    <a class="btn btn-primary" href="modifier_produit.php?id=<?php echo $produit->id ?>">Modifier</a>
-                    <a class="btn btn-danger" href="supprimer_produit.php?id=<?php echo $produit->id ?>" onclick="return confirm('Voulez vous vraiment supprimer le produit <?php echo $produit->libelle?> ?')">Supprimer</a>
+                    <a class="button is-link is-hovered" href="modifier_produit.php?id=<?php echo $produit->id ?>">Modifier</a>
+                    <a class="button is-danger is-hovered" href="supprimer_produit.php?id=<?php echo $produit->id ?>" onclick="return confirm('Voulez vous vraiment supprimer le produit <?php echo $produit->libelle?> ?')">Supprimer</a>
                 </td>
             </tr>
             <?php
         }
         ?>
         </tbody>
+        
     </table>
 </div>
 
